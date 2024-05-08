@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"');
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"');
+ @import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Mountains+of+Christmas&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.wrapper .multi_color_border{
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #ffc107 0% , #ffc107 25%, #494949 25%, #494949 50%, #ffc107 50%, #ffc107 75%, #494949 75%, #494949 100%);
+}
+
+.wrapper .top_nav{
+  margin-top: 5px;
+  width: 100%;
+  height: 65px;
+  background: #fff;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .top_nav .left{
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .top_nav .left .logo p{
+  font-size: 24px;
+  font-weight: bold;
+  color: #494949;
+  font-family: "Mountains of Christmas", cursive;
+  margin-right: 25px;
+}
+
+.wrapper .top_nav .left .logo p span{
+  color: #37a000;
+  font-family: "Mountains of Christmas", cursive;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]{
+  border: 1px solid #666666;
+  padding: 5px 10px; 
+  outline: none;
+  transition: all 0.5s linear;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]:focus{
+  width: 250px;
+}
+
+.wrapper .top_nav .right ul{
+  display: flex;
+}
+
+.wrapper .top_nav .right ul li{
+  margin: 0 12px;
+}
+
+.wrapper .top_nav .right ul li:last-child{
+  background:  #ffc107;
+  margin-right: 0;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.wrapper .top_nav .right ul li:hover:last-child{
+  background: #494949;
+}
+
+.wrapper .top_nav .right ul li a{
+  display: block;
+  padding: 8px 10px;
+  color: #666666;
+}
+
+.wrapper .top_nav .right ul li:last-child a{
+   color: #fff;
+}
+
+.wrapper .bottom_nav{
+  width: 100%;
+  background: #ffd146;
+  height: 45px;
+  padding: 0 50px;
+}
+
+.wrapper .bottom_nav ul{
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .bottom_nav ul li a{
+  color: #494949;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.wrapper .banner img{
+  width: 100%;
+  height: 400px;
+}
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding: 10%;
+    }
+    .gallery-item {
+      margin: 10px;
+      flex-basis: calc(33.33% - 20px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="multi_color_border"></div>
+        <div class="top_nav">
+            <div class="left">
+              <div class="logo"><img src="https://www.sahyogcare4u.org/img/SahyogNewLogo.png"></div>
+          </div> 
+          <div class="right">
+            <ul>
+              <li><a href="https://twitter.com"><i class="bi bi-facebook"></i></a></li>
+              <li><a href="https://facebook.com"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="https://instagram.com"><i class="bi bi-twitter"></i></a></li>
+              <li><a href="/index.html">Donate</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom_nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html">About US</a></li>
+            <li><a href="/index.html">Programs</a></li>
+            <li><a href="/index.html">Our Socials</a></li>
+            <li><a href="/index.html">More</a></li>
+            <li><a href="/index.html">Create A Fundraiser</a></li>
+          </ul>
+      </div>
+  <h1 style="text-align: center; margin-top: 30px;margin-bottom: -8%;font-size: 70px;">Event Gallery</h1>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <a data-fancybox="gallery" href="https://picsum.photos/1024/768?random=1">
+        <img src="https://picsum.photos/200/150?random=1" alt="Image 1">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a data-fancybox="gallery" href="https://picsum.photos/1024/768?random=2">
+        <img src="https://picsum.photos/200/150?random=2" alt="Image 2">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a data-fancybox="gallery" href="https://picsum.photos/1024/768?random=3">
+        <img src="https://picsum.photos/200/150?random=3" alt="Image 3">
+      </a>
+    </div>
+    <div class="gallery-item">
+        <a data-fancybox="gallery" href="https://picsum.photos/1024/768?random=4">
+          <img src="https://picsum.photos/200/150?random=4" alt="Image 4">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a data-fancybox="gallery" href="https://picsum.photos/1024/768?random=5">
+          <img src="https://picsum.photos/200/150?random=5" alt="Image 5">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a data-fancybox="gallery" href="https://picsum.photos/1024/768?random=6">
+          <img src="https://picsum.photos/200/150?random=6" alt="Image 6">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a data-fancybox="gallery" href="https://picsum.photos/1024/768?random=4">
+          <img src="https://picsum.photos/200/150?random=50" alt="Image 4">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a data-fancybox="gallery" href="https://picsum.photos/1024/768?random=5">
+          <img src="https://picsum.photos/200/150?random=55" alt="Image 5">
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a data-fancybox="gallery" href="https://picsum.photos/1024/768?random=6">
+          <img src="https://picsum.photos/200/150?random=61" alt="Image 6">
+        </a>
+      </div>
+    
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('[data-fancybox="gallery"]').fancybox({
+        loop: true,
+        buttons: [
+          'slideShow',
+          'fullScreen',
+          'thumbs',
+          'close'
+        ]
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"');
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"');
+ @import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Mountains+of+Christmas&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.wrapper .multi_color_border{
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #ffc107 0% , #ffc107 25%, #494949 25%, #494949 50%, #ffc107 50%, #ffc107 75%, #494949 75%, #494949 100%);
+}
+
+.wrapper .top_nav{
+  margin-top: 5px;
+  width: 100%;
+  height: 65px;
+  background: #fff;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .top_nav .left{
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .top_nav .left .logo p{
+  font-size: 24px;
+  font-weight: bold;
+  color: #494949;
+  font-family: "Mountains of Christmas", cursive;
+  margin-right: 25px;
+}
+
+.wrapper .top_nav .left .logo p span{
+  color: #37a000;
+  font-family: "Mountains of Christmas", cursive;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]{
+  border: 1px solid #666666;
+  padding: 5px 10px; 
+  outline: none;
+  transition: all 0.5s linear;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]:focus{
+  width: 250px;
+}
+
+.wrapper .top_nav .right ul{
+  display: flex;
+}
+
+.wrapper .top_nav .right ul li{
+  margin: 0 12px;
+}
+
+.wrapper .top_nav .right ul li:last-child{
+  background:  #ffc107;
+  margin-right: 0;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.wrapper .top_nav .right ul li:hover:last-child{
+  background: #494949;
+}
+
+.wrapper .top_nav .right ul li a{
+  display: block;
+  padding: 8px 10px;
+  color: #666666;
+}
+
+.wrapper .top_nav .right ul li:last-child a{
+   color: #fff;
+}
+
+.wrapper .bottom_nav{
+  width: 100%;
+  background: #ffd146;
+  height: 45px;
+  padding: 0 50px;
+}
+
+.wrapper .bottom_nav ul{
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .bottom_nav ul li a{
+  color: #494949;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.wrapper .banner img{
+  width: 100%;
+  height: 400px;
+}
+ *, *::before, *::after {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 font-family: sans-serif;
+}
+ body {
+	 width: 100vw;
+	 display: grid;
+	 place-content: center;
+}
+
+
+ .c-gallery {
+	 display: grid;
+	 grid-gap: 40px;
+}
+ @media (min-width: 1024px) {
+	 .c-gallery {
+		 grid-template-columns: 1fr 1.7fr;
+	}
+}
+ .c-gallery .c-gallery__header {
+	 padding: 20px;
+	 height: 100%;
+	 display: grid;
+	 place-items: center;
+}
+ @media (min-width: 1024px) {
+	 .c-gallery .c-gallery__header {
+		 height: 100vh;
+	}
+}
+ .c-gallery .c-gallery__header .c-gallery__header-inner {
+	 max-width: 400px;
+}
+ .c-gallery .c-gallery__header .c-gallery__title {
+	 margin: 0 0 16px;
+	 color: #141d24;
+	 font-size: 58px;
+	 font-family: Poppins;
+	 font-weight: 700;
+	 text-transform: uppercase;
+}
+ .c-gallery .c-gallery__header .c-gallery__subtitle {
+	 display: block;
+	 margin: 0 0 8px;
+	 color: rgba(20, 29, 36, .7);
+	 font-size: 18px;
+	 font-family: Poppins;
+	 font-weight: 700;
+	 text-transform: uppercase;
+}
+ .c-gallery .c-gallery__header .c-gallery__description {
+	 margin: 0 0 16px;
+	 color: #141d24;
+	 font-size: 16px;
+	 font-family: Poppins;
+	 font-weight: 400;
+	 line-height: 1.6;
+}
+ .c-gallery .c-gallery__header .c-gallery__link {
+	 position: relative;
+	 align-items: center;
+	 color: #141d24;
+	 font-size: 16px;
+	 font-family: Poppins;
+	 font-weight: 400;
+	 text-transform: initial;
+}
+ .c-gallery .c-gallery__header .c-gallery__link:hover {
+	 color: #0b1014;
+}
+ .c-gallery .c-gallery__images {
+	 height: 100vh;
+	 display: grid;
+	 grid-template-columns: repeat(3, minmax(0, 1fr));
+	 gap: 1rem;
+	 overflow: hidden;
+}
+ @media (min-width: 1024px) {
+	 .c-gallery .c-gallery__images {
+		 grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+ .c-gallery img {
+	 max-width: 100%;
+	 height: auto;
+	 object-fit: cover;
+	 object-position: center;
+}
+ .c-gallery .c-gallery__column {
+	 animation: slide 50s linear infinite;
+}
+ .c-gallery .c-gallery__column:hover {
+	 animation-play-state: paused;
+}
+ .c-gallery .c-gallery--reverse {
+	 animation-direction: reverse;
+}
+ @keyframes slide {
+	 to {
+		 translate: 0 -50%;
+	}
+}
+ .texto {
+	 padding: 120px 40px;
+	 line-height: 1.6;
+}
+ .texto .texto-inner {
+	 max-width: 1200px;
+	 margin: 0 auto;
+	 line-height: 36px;
+	 font-size: 18px;
+}
+
+ 
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="multi_color_border"></div>
+    <div class="top_nav">
+        <div class="left">
+          <div class="logo"><img src="https://www.sahyogcare4u.org/img/SahyogNewLogo.png"></div>
+      </div> 
+      <div class="right">
+        <ul>
+          <li><a href="https://twitter.com"><i class="bi bi-facebook"></i></a></li>
+          <li><a href="https://facebook.com"><i class="bi bi-instagram"></i></a></li>
+          <li><a href="https://instagram.com"><i class="bi bi-twitter"></i></a></li>
+          <li><a href="/index.html">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom_nav">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/index.html">About US</a></li>
+        <li><a href="/index.html">Programs</a></li>
+        <li><a href="/index.html">Our Socials</a></li>
+        <li><a href="/index.html">More</a></li>
+        <li><a href="/index.html">Create A Fundraiser</a></li>
+      </ul>
+  </div>
+  
+</div>
+  <section class="c-gallery">
+    <header class="c-gallery__header">
+      <div class="c-gallery__header-inner">
+        <h2 class="c-gallery__title">
+          Gallery
+        </h2>
+  
+        <div class="c-gallery__description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem voluptatum blanditiis et fuga molestiae facilis sapiente harum, vero culpa ipsam pariatur esse aspernatur, dolores possimus distinctio rerum, placeat reprehenderit porro!
+          </p>
+  
+          <br>
+  
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat nesciunt quo voluptate, facere nobis ad eos delectus porro ducimus? Omnis numquam saepe expedita odio, necessitatibus aliquid ea voluptas fuga odit!
+          </p>
+        </div>
+  
+      </div>
+    </header>
+    
+    <div class="c-gallery__images">
+      <div class="c-gallery__column">
+        <img src="https://picsum.photos/1024/768?random=50" alt="">
+        <img src="https://picsum.photos/1024/768?random=51" alt="">
+        <img src="https://picsum.photos/1024/768?random=52" alt="">
+        <img src="https://picsum.photos/1024/768?random=53" alt="">
+        <img src="https://picsum.photos/1024/768?random=54" alt="">
+        <img src="https://picsum.photos/1024/768?random=55" alt="">
+        <img src="https://picsum.photos/1024/768?random=56" alt="">
+        <img src="https://picsum.photos/1024/768?random=57" alt="">
+        <img src="https://picsum.photos/1024/768?random=58" alt="">
+        <img src="https://picsum.photos/1024/768?random=59" alt="">
+      </div>
+  
+      <div class="c-gallery__column c-gallery--reverse">
+        <img src="https://picsum.photos/1024/768?random=61" alt="">
+        <img src="https://picsum.photos/1024/768?random=62" alt="">
+        <img src="https://picsum.photos/1024/768?random=63" alt="">
+        <img src="https://picsum.photos/1024/768?random=64" alt="">
+        <img src="https://picsum.photos/1024/768?random=65" alt="">
+        <img src="https://picsum.photos/1024/768?random=66" alt="">
+        <img src="https://picsum.photos/1024/768?random=67" alt="">
+        <img src="https://picsum.photos/1024/768?random=68" alt="">
+        <img src="https://picsum.photos/1024/768?random=69" alt="">
+        <img src="https://picsum.photos/1024/768?random=70" alt="">
+      </div>
+  
+      <div class="c-gallery__column">
+        <img src="https://picsum.photos/1024/768?random=81" alt="">
+        <img src="https://picsum.photos/1024/768?random=82" alt="">
+        <img src="https://picsum.photos/1024/768?random=83" alt="">
+        <img src="https://picsum.photos/1024/768?random=84" alt="">
+        <img src="https://picsum.photos/1024/768?random=85" alt="">
+        <img src="https://picsum.photos/1024/768?random=86" alt="">
+        <img src="https://picsum.photos/1024/768?random=87" alt="">
+        <img src="https://picsum.photos/1024/768?random=88" alt="">
+        <img src="https://picsum.photos/1024/768?random=89" alt="">
+        <img src="https://picsum.photos/1024/768?random=90" alt="">
+      </div>
+    </div>
+  </section>
+ 
+</body>
+</html>

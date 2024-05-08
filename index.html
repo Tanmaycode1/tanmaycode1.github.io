@@ -1,97 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timeline Animation</title>
-<style>
-body{
-  background-color: #eb8c34;
-}  
-.timeline-container {
-  position: relative;
-  width: 50%;
-  margin: 280px auto;
-  font-size: 25px;
-  font-family: Georgia, serif;
-}
-.main{
-  background-color: aliceblue;
-}
-.line {
-  position: absolute;
-  top: 70%;
-  left: 0;
-  width: 0;
-  height: 4px; /* Reduced thickness of the line */
-  background-color: #000;
-  animation: drawLine 10s ease-out forwards; /* Slower animation */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-@keyframes drawLine {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
+.wrapper .multi_color_border{
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #ffc107 0% , #ffc107 25%, #494949 25%, #494949 50%, #ffc107 50%, #ffc107 75%, #494949 75%, #494949 100%);
 }
 
-.text {
-  position: absolute;
-  transform: translateY(-50%);
-  opacity: 0;
-  animation: popUp 2s ease-out forwards; /* Faster animation */
+.wrapper .top_nav{
+  margin-top: 5px;
+  width: 100%;
+  height: 65px;
+  background: #fff;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.text:nth-child(1) {
-  left: 0%; /* Adjust the distance from the left */
-  top: calc(50% + 30px); /* Adjust this value as needed */
-  animation-delay: 0s; /* Adjust the delay */
+.wrapper .top_nav .left{
+  display: flex;
+  align-items: center;
 }
 
-.text:nth-child(2) {
-  left: 25%; /* Adjust the distance from the left */
-  top: calc(50% - 30px); /* Adjust this value as needed */
-  animation-delay: 2s; /* Adjust the delay */
+.wrapper .top_nav .left .logo p{
+  font-size: 24px;
+  font-weight: bold;
+  color: #494949;
+  font-family: "Mountains of Christmas", cursive;
+  margin-right: 25px;
 }
 
-.text:nth-child(3) {
-  left: 50%; /* Adjust the distance from the left */
-  top: calc(50% + 30px); /* Adjust this value as needed */
-  animation-delay: 4s; /* Adjust the delay */
+.wrapper .top_nav .left .logo p span{
+  color: #37a000;
+  font-family: "Mountains of Christmas", cursive;
 }
 
-.text:nth-child(4) {
-  left: 75%; /* Adjust the distance from the left */
-  top: calc(50% - 30px); /* Adjust this value as needed */
-  animation-delay: 6s; /* Adjust the delay */
+.wrapper .top_nav .left .search_bar input[type="text"]{
+  border: 1px solid #666666;
+  padding: 5px 10px; 
+  outline: none;
+  transition: all 0.5s linear;
 }
 
-
-
-@keyframes popUp {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.wrapper .top_nav .left .search_bar input[type="text"]:focus{
+  width: 250px;
 }
 
-</style>
+.wrapper .top_nav .right ul{
+  display: flex;
+}
+
+.wrapper .top_nav .right ul li{
+  margin: 0 12px;
+}
+
+.wrapper .top_nav .right ul li:last-child{
+  background:  #ffc107;
+  margin-right: 0;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.wrapper .top_nav .right ul li:hover:last-child{
+  background: #494949;
+}
+
+.wrapper .top_nav .right ul li a{
+  display: block;
+  padding: 8px 10px;
+  color: #666666;
+}
+
+.wrapper .top_nav .right ul li:last-child a{
+   color: #fff;
+}
+
+.wrapper .bottom_nav{
+  width: 100%;
+  background: #ffd146;
+  height: 45px;
+  padding: 0 50px;
+}
+
+.wrapper .bottom_nav ul{
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .bottom_nav ul li a{
+  color: #494949;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.wrapper .banner img{
+  width: 100%;
+  height: 400px;
+}
+
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        h1 {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .event-card {
+            width: 300px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .event-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .event-info {
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .event-info h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .event-info p {
+            margin-bottom: 0;
+        }
+        .gallery-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #333;
+            background-color: #ffc107;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-  <div class="main">
-  <div class="timeline-container">
-    <div class="line"></div>
-    <div class="text">25-09-21<br> EVENT 2<br><br> </div>
-    <div class="text"><br>2-10-22<br>EVENT 3 </div>
-    <div class="text">19-05-23 <br>EVENT 4 <br><br></div>
-    <div class="text">  <br><br><br>01-09-20<br>EVENT 1</div>
-
-
-  </div>
-  </div>
+    <div class="wrapper">
+        <div class="multi_color_border"></div>
+        <div class="top_nav">
+            <div class="left">
+              <div class="logo"><img src="https://www.sahyogcare4u.org/img/SahyogNewLogo.png"></div>
+          </div> 
+          <div class="right">
+            <ul>
+              <li><a href="https://twitter.com"><i class="bi bi-facebook"></i></a></li>
+              <li><a href="https://facebook.com"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="https://instagram.com"><i class="bi bi-twitter"></i></a></li>
+              <li><a href="/index.html">Donate</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom_nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html">About US</a></li>
+            <li><a href="/index.html">Programs</a></li>
+            <li><a href="/index.html">Our Socials</a></li>
+            <li><a href="/index.html">More</a></li>
+            <li><a href="/index.html">Create A Fundraiser</a></li>
+          </ul>
+      </div>
+      
+    </div>
+    <div class="container">
+        <h1>Our Events</h1>
+        <div class="event-card">
+            <img src="https://picsum.photos/1024/768?random=50" alt="Event 1">
+            <div class="event-info">
+               <center> <h2>Event 1</h2></center>
+                <p>Description of Event 1 goes here.</p>
+                <a href="gallery1.html" class="gallery-link">Visit Gallery</a>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="https://picsum.photos/1024/768?random=52" alt="Event 2">
+            <div class="event-info">
+               <center> <h2>Event 2</h2></center>
+                <p>Description of Event 2 goes here.</p>
+                <a href="gallery2.html" class="gallery-link">Visit Gallery</a>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="https://picsum.photos/1024/768?random=53" alt="Event 3">
+            <div class="event-info">
+                <center><h2>Event 3</h2></center>
+                <p>Description of Event 3 goes here.</p>
+                <a href="gallery1.html" class="gallery-link">Visit Gallery</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
