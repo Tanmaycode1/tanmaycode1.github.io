@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sexy Horizontal Timeline Animation</title>
+<style>
+body{
+  background-color: #eb8c34;
+}  
+.timeline-container {
+  position: relative;
+  width: 50%;
+  margin: 280px auto;
+  font-size: 25px;
+  font-family: Georgia, serif;
+}
+.main{
+  background-color: aliceblue;
+}
+.line {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 0;
+  height: 4px; /* Reduced thickness of the line */
+  background-color: #000;
+  animation: drawLine 10s ease-out forwards; /* Slower animation */
+}
+
+@keyframes drawLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.text {
+  position: absolute;
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: popUp 2s ease-out forwards; /* Faster animation */
+}
+
+.text:nth-child(1) {
+  left: 0%; /* Adjust the distance from the left */
+  top: calc(50% + 30px); /* Adjust this value as needed */
+  animation-delay: 0s; /* Adjust the delay */
+}
+
+.text:nth-child(2) {
+  left: 25%; /* Adjust the distance from the left */
+  top: calc(50% - 30px); /* Adjust this value as needed */
+  animation-delay: 2s; /* Adjust the delay */
+}
+
+.text:nth-child(3) {
+  left: 50%; /* Adjust the distance from the left */
+  top: calc(50% + 30px); /* Adjust this value as needed */
+  animation-delay: 4s; /* Adjust the delay */
+}
+
+.text:nth-child(4) {
+  left: 75%; /* Adjust the distance from the left */
+  top: calc(50% - 30px); /* Adjust this value as needed */
+  animation-delay: 6s; /* Adjust the delay */
+}
+
+
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="main">
+  <div class="timeline-container">
+    <div class="line"></div>
+    <div class="text">25-09-21<br> EVENT 2<br><br> </div>
+    <div class="text"><br>2-10-22<br>EVENT 3 </div>
+    <div class="text">19-05-23 <br>EVENT 4 <br><br></div>
+    <div class="text">  <br><br><br>01-09-20<br>EVENT 1</div>
+
+
+  </div>
+  </div>
+</body>
+</html>
